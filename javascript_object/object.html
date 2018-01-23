@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- javascript code -->
+<script type="text/javascript">
+	/*object by literal */
+    emp = {id:102,name:"MUTUYIMANA Origene",companey:"SmagriLtd",salary:600000};
+    document.write(emp.id + " "+emp.name + " "+ emp.companey +" "+emp.salary);
+    document.write('<br>');
+    /* --------- by creating instance of object --------- */
+
+    var emp = new employee();
+    emp.id     = 101;
+    emp.name   = "MUYANGO Orest";
+    emp.salary =  600000;
+    document.write("Th salary of "+ emp.name+"  "+emp.salary);
+
+    /*creating object by using object constructor  */
+    function employee(id , name ,salary){
+
+     this.id = id;
+     this.name = name;
+     this.salary= salary;
+    }
+   e = new employee(103,'MUJYEMANA ORIEST',300000);
+   document.write(e.name);
+   /*creating method in javascript object*/
+
+   function employee_2(id ,name ,salary){
+    this.id = id;
+    this.name= name;
+    this.salary = salary;
+    this.changeSalary = changeSalary;
+   }
+
+   function changeSalary(othersalary){
+    this.salary = othersalary;
+   }
+
+   e2 = new employee_2(200, 'ERNEST NDACYAYISENGA', 300000);
+   document.write('<br>'+ e2.name + " salary "+e2.salary);
+   document.write('<br>'+" change salary ");
+   e2.changeSalary(800000);
+   document.write(e2.salary);
+    
+</script>
+</body>
+</html>

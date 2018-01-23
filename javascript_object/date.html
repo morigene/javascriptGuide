@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	/* date object */
+
+	var name =new String("origene MUTUYIMANA ");
+	document.write(name + "<br>" );
+/*
+ 1.getMon
+ 2.getSeconds
+ 3.getHour
+*/
+var today = new Date();
+document.write(today + '<br>');
+document.write(today.getHours() + " <br> ");
+
+var myArray =["02/12/2017","26/02/2013","26/02/2016"];
+var myArray2 = new Array();
+var temp;
+for (var i = 0 ; i < myArray.length ; i++){
+
+temp = myArray[i].split("/")
+var newDate = temp[2] + "," + temp[1] + ","+temp[0];
+temp = new Date(newDate).getTime();
+myArray2[i] = temp;
+document.write(myArray2[i] +" <br> ");
+}
+document.write(" the maximum time stamp is " + Math.max.apply(null, myArray2) + "<br>");
+var temp = new Date(Math.max.apply(null, myArray2));
+document.write(temp + " <br> ");
+
+var str = "20/12/199020/03/2000";
+document.write(str.match(/.{1,10}/g));
+
+// average
+var d = [0,100,200,5,100];
+var su= 0;
+var j =  0;
+var k = 0;
+for (var i = 0; i < d.length; i++) {
+	su=su +  d[i];
+}
+var average = su/i;
+document.write("<br>"+" average "+average);
+
+// 
+document.write("<br>");
+var duplication = [100,2,3,2,4,5,7,100];
+var temp = 0;
+var j =0;
+document.write("<br>");
+for (var i = 0 ; i < duplication.length; i++) {
+   temp = duplication[i]
+  
+  for (var j = 0; j < duplication.length; j++) {
+   
+      if (temp != duplication[j]) {
+      	continue;
+      } else {
+
+      	document.write(temp + " <br> ");
+      }
+  }
+   
+}
+
+
+
+
+	
+</script>
+</body>
+</html>

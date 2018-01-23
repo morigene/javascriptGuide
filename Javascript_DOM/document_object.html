@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id = "message"></p>
+<form >
+<input type="button" name="button" value="comment" onclick="showMyComment();"> <br>	
+</form>
+<div id = "myLocation">
+	
+</div>
+<script type="text/javascript">
+	/* Document object model */
+
+/*
+document object model represent  whole html document.
+------------Method of document object ----------
+getElementById().return element having the given id value.
+getElementByName().return element having the given  name value
+getElementByTagName(). return element having the given tag name.
+getElementByClassName().returns all the element havign the given class name.
+
+
+*/
+
+function showMyComment(){
+var data = "Name:<input type ='text' name ='fullname'><br> Comment:<br> <textarea cols= '50' rows= '10'></textarea>  ";
+document.getElementById('myLocation').innerHTML = data +'<br>'+'<input type="button" name="post" value="Post">';
+
+var name = 'origene';
+if(name === 'origened'){
+
+	document.getElementById('message').innerHTML = 'very good';
+}else{
+	document.getElementById('message').innerHTML =' not very good';
+}
+
+}
+</script>
+
+</body>
+</html>
